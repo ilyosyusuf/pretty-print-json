@@ -1,8 +1,25 @@
+
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 
 void main() {
+  Map json = {
+    "name" : "Ilyos Yusuf",
+    "speciality" : "Flutter developer",
+    "linkedin" : "https://www.linkedin.com/in/ilyos-yusupov/",
+    "github" : "https://github.com/ilyosyusuf"
+  };
+
+  JsonEncoder encoder = const JsonEncoder.withIndent('   ');
+  String prettyPrintJson = encoder.convert(json);
+
+  print(json);
+  print(prettyPrintJson);
+
   runApp(MyApp());
 }
+
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
